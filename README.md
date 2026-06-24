@@ -4,17 +4,26 @@ Infrastructure as Code (IaC) project using Terraform and AWS.
 
 ## Objective
 
-Provision and destroy AWS infrastructure using Terraform.
+Demonstrate how to provision and manage AWS infrastructure using Terraform, including:
 
-This project demonstrates how to automate the creation of an EC2 instance and Security Group using Infrastructure as Code principles.
+* Security Group creation
+* EC2 instance provisioning
+* Infrastructure validation
+* Automated resource destruction
 
-## Architecture
+## Technologies Used
+
+* Terraform
+* AWS EC2
+* AWS IAM
+* AWS CLI
+* Security Groups
+* Infrastructure as Code (IaC)
+
+## Project Architecture
 
 ```text
 Terraform
-    │
-    ▼
-AWS Provider
     │
     ▼
 Security Group
@@ -23,92 +32,65 @@ Security Group
 EC2 Instance
 ```
 
-## AWS Services Used
+## Files Structure
 
-* Amazon EC2
-* AWS IAM
-* AWS VPC
-* Security Groups
-
-## Terraform Resources
-
-### Security Group
-
-Configured to allow:
-
-* SSH (Port 22)
-* Outbound internet access
-
-### EC2 Instance
-
-* Instance Type: t3.micro
-* Region: us-east-1
-* Operating System: Amazon Linux 2023
-* Managed through Terraform
-
-## Terraform Workflow
-
-### Initialize Terraform
-
-```bash
-terraform init
+```text
+aws-terraform-ec2-lab/
+├── main.tf
+├── provider.tf
+├── variables.tf
+├── outputs.tf
+├── .gitignore
+├── README.md
+└── screenshots/
 ```
 
-### Review Execution Plan
+## Terraform Initialization
 
-```bash
-terraform plan
-```
+Terraform provider initialization:
 
-### Create Infrastructure
+![Terraform Init](screenshots/terraform-init.png)
 
-```bash
-terraform apply
-```
+## Infrastructure Provisioning
 
-### Destroy Infrastructure
+Terraform creating AWS resources:
 
-```bash
-terraform destroy
-```
+![Terraform Apply](screenshots/terraform-apply.png)
 
-## Project Results
+## EC2 Instance Created
 
-Infrastructure was successfully:
+EC2 instance successfully provisioned through Terraform:
 
-* Provisioned using Terraform
-* Validated in AWS Console
-* Destroyed using Terraform
+![EC2 Running](screenshots/ec2-running.png)
 
-## Evidence
+## Infrastructure Destruction
 
-### Terraform Apply Success
+Terraform execution destroying resources:
 
-(Add screenshot)
+![Terraform Destroy](screenshots/terraform-destroy.png)
 
-### EC2 Instance Running
+Resources successfully removed:
 
-(Add screenshot)
-
-### Terraform Destroy Success
-
-(Add screenshot)
+![Terraform Destroy Complete](screenshots/terraform-destroy-complete.png)
 
 ## Skills Demonstrated
 
-* Terraform
+* Terraform Fundamentals
 * Infrastructure as Code (IaC)
-* AWS EC2
-* Security Groups
-* AWS IAM
-* AWS CLI
+* AWS EC2 Provisioning
+* Security Group Management
+* AWS CLI Configuration
 * Cloud Infrastructure Automation
+* Resource Lifecycle Management
 
 ## Author
 
 Gabriel Paes Cardenette
 
-### Certifications
+LinkedIn:
+https://linkedin.com/in/gabriel-paes-cardenette-b604b6235
+
+## Certifications
 
 * AWS Certified Cloud Practitioner (CLF-C02)
 * Cisco Networking Basics
